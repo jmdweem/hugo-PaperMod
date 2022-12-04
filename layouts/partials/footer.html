@@ -5,6 +5,13 @@
     {{- else }}
     <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
     {{- end }}
+    {{- if .Site.Params.BeiAn }}
+    <span>&middot;</span>
+    <span><a href="https://beian.miit.gov.cn">{{ .Site.Params.BeiAn }}</a></span>
+    <br>
+    {{- else }}
+    <span>&middot;</span>
+    {{- end}}
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
